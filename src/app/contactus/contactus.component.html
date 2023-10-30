@@ -1,0 +1,35 @@
+<app-navbar></app-navbar>
+<h1>Contact Us Form</h1>
+<h3>Enter Contact Data</h3>
+<form name="TemplateForm" #contactData="ngForm" (ngSubmit)='addContact(contactData)'>
+  <table>
+    <tr style="text-align: left;"><th>Contact ID : </th><td colspan="3"><input type="number" name="contactid" ngModel /></td></tr>
+    <tr style="text-align: left;"><th>First Name : </th><td colspan="3"><input type="text" name="firstName" ngModel required /></td></tr>
+    <tr style="text-align: left;"><th>Last Name : </th><td colspan="3"><input type="text" name="lastName" ngModel required /></td></tr>
+    <tr style="text-align: left;"><th>Phone Number : </th><td colspan="3"><input type="number" name="phone" ngModel required /></td></tr>
+    <tr style="text-align: left;"><th>Email ID : </th><td colspan="3"><input type="text" name="emailid" ngModel required /></td></tr>
+    <tr style="text-align: left;"><th>Address : </th><td colspan="3"><input type="text" name="address" ngModel required /></td></tr>
+    <tr><td style="text-align: right;"><input type="submit" value="Add" [disabled]="!contactData.valid" /></td>
+      <td><input type="button" value="Modify" [disabled]="!contactData.valid" (click)='updateContact(contactData)' /></td>
+      <td><input type="button" value="Delete" (click)='deleteContact(contactData)' /></td>
+      <td><input type="button" value="GetAll" (click)='getAllContacts()' /></td></tr>
+  </table>
+</form><br>
+<label>{{this.expresponse}}</label><br><br>
+<form name="TemplateForm2" #contactData2="ngForm" (ngSubmit)='searchContact(contactData2)'>
+  <table>
+    <tr><th>Enter Contact ID : </th><td><input type="number" name="contactid" ngModel required /></td>
+    <td><input type="submit" value="Search" [disabled]="!contactData2.valid" /></td></tr>
+  </table>
+</form><br>
+<table class="result" *ngIf="showResult">
+  <tr style="background-color: rgb(162, 101, 78); color: rgb(75, 3, 3);">
+    <th>Contact ID</th>
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th>Phone Number</th>
+    <th>Email ID</th>
+    <th>Address</th>
+  </tr>
+  <tr *ngFor="let contact of contactList"><td>{{contact.contactid}}</td><td>{{contact.firstname}}</td><td>{{contact.lastname}}</td><td>{{contact.phonenumber}}</td><td>{{contact.EmailID}}</td><td>{{contact.address}}</td></tr>
+</table>

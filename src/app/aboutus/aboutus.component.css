@@ -1,0 +1,61 @@
+body {
+    background-image: url('https://c4.wallpaperflare.com/wallpaper/24/526/333/iron-man-marvel-comics-wallpaper-preview.jpg');
+    background-size: cover;
+    background-repeat: no-repeat; 
+    background-attachment: fixed;
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: #f9f9f9;
+    padding: 20px; 
+  }
+  
+  body {
+    background-color: black;
+    color: white;
+    font-family: Arial, sans-serif;
+  }
+  
+  h1 {
+    font-size: 3em;
+    text-align: center;
+    text-shadow: 0 0 10px #47d6ef;
+  }
+  
+  p {
+    font-size: 1.2em; 
+    line-height: 1.5;
+    max-width: 600px;
+    margin: 0 auto;
+    text-shadow: 0 0 10px #11abd6;
+  }
+  
+  hr {
+    border: none;
+    height: 5px;
+    background: linear-gradient(to right, #1999e4, #14ffe6, #85fff5);
+  }
+  
+  a {
+    text-decoration: none;
+    color: #0e9fc6;
+    text-shadow: 0 0 10px #2c9adf;
+  }
+  
+  a:hover {
+    color: #14ffe6;
+    text-shadow: 0 0 10px #14ffe6;  
+  }
+  
+  button {
+    color: white;
+    padding: 10px 20px;
+    border: 2px solid #6bd5ec;
+    border-radius: 5px;
+    text-shadow: 0 0 10px #5fc8e8;
+    background: linear-gradient(to right, #3aaec8, #14ffe6);  
+  }
+  
+  button:hover {
+    border-color: #39bcf4;
+    text-shadow: 0 0 10px #2da7cb;
+  }
